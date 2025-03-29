@@ -4,8 +4,11 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { GraduationCap, Languages, Calendar } from "lucide-react"
+import { useLanguage } from "@/hooks/use-language"
 
 export default function Education() {
+  const { t } = useLanguage()
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -22,7 +25,7 @@ export default function Education() {
   }
 
   return (
-    <section id="education" className="py-20">
+    <section id="education" className="py-16 md:py-20">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -30,14 +33,14 @@ export default function Education() {
         variants={containerVariants}
       >
         <motion.h2 variants={itemVariants} className="section-title">
-          Education
+          {t("education.title")}
         </motion.h2>
 
         <motion.div variants={itemVariants} className="max-w-3xl mx-auto">
           <Card className="glass-card">
-            <CardContent className="pt-6">
+            <CardContent className="pt-6 px-4 md:px-6">
               <div className="timeline-item">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div className="flex items-center">
                     <div className="h-7 w-7 mr-3">
                       <img 
@@ -56,7 +59,7 @@ export default function Education() {
                   </div>
                 </div>
 
-                <p className="text-primary mb-6 ml-12 md:ml-0">Information & Technology</p>
+                <p className="text-primary mb-5 ml-12 md:ml-0">Information & Technology</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-12 md:ml-0">
                   <motion.div
@@ -69,8 +72,8 @@ export default function Education() {
                     <div className="flex items-start">
                       <GraduationCap className="h-5 w-5 mr-3 text-primary mt-1" />
                       <div>
-                        <p className="text-sm text-gray-400">Major</p>
-                        <p className="text-gray-200">Information & Technology</p>
+                        <p className="text-sm text-gray-400">{t("education.major")}</p>
+                        <p className="text-gray-200">{t("education.majorName")}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -85,7 +88,7 @@ export default function Education() {
                     <div className="flex items-start">
                       <Languages className="h-5 w-5 mr-3 text-primary mt-1" />
                       <div>
-                        <p className="text-sm text-gray-400">Language</p>
+                        <p className="text-sm text-gray-400">{t("education.language")}</p>
                         <div className="flex items-center">
                           <p className="text-gray-200 mr-2">TOEIC</p>
                           <Badge className="bg-primary/80 text-white">450+</Badge>

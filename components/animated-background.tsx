@@ -15,6 +15,27 @@ const AnimatedBackground = () => {
     let width = window.innerWidth
     let height = window.innerHeight
 
+    // Define geometric shapes first before referencing them
+    const geometricShapes = [
+      { x: width * 0.2, y: height * 0.3, size: Math.min(300, width * 0.3) },
+      { x: width * 0.8, y: height * 0.7, size: Math.min(250, width * 0.25) },
+      { x: width * 0.5, y: height * 0.1, size: Math.min(200, width * 0.2) },
+    ]
+
+    // Set canvas dimensions to match viewport
+    const setCanvasDimensions = () => {
+      width = window.innerWidth
+      height = window.innerHeight
+      canvas.width = width
+      canvas.height = height
+
+      // Update geometric shapes positions when resizing
+      geometricShapes[0] = { x: width * 0.2, y: height * 0.3, size: Math.min(300, width * 0.3) }
+      geometricShapes[1] = { x: width * 0.8, y: height * 0.7, size: Math.min(250, width * 0.25) }
+      geometricShapes[2] = { x: width * 0.5, y: height * 0.1, size: Math.min(200, width * 0.2) }
+    }
+
+    // Initialize canvas dimensions
     canvas.width = width
     canvas.height = height
 
@@ -101,13 +122,6 @@ const AnimatedBackground = () => {
       }
     }
 
-    // Add geometric shapes
-    const geometricShapes = [
-      { x: width * 0.2, y: height * 0.3, size: 300 },
-      { x: width * 0.8, y: height * 0.7, size: 250 },
-      { x: width * 0.5, y: height * 0.1, size: 200 },
-    ]
-
     function drawGeometricShapes() {
       if (!ctx) return
 
@@ -143,15 +157,7 @@ const AnimatedBackground = () => {
 
     // Handle window resize
     function handleResize() {
-      width = window.innerWidth
-      height = window.innerHeight
-      canvas.width = width
-      canvas.height = height
-
-      // Update geometric shapes positions
-      geometricShapes[0] = { x: width * 0.2, y: height * 0.3, size: 300 }
-      geometricShapes[1] = { x: width * 0.8, y: height * 0.7, size: 250 }
-      geometricShapes[2] = { x: width * 0.5, y: height * 0.1, size: 200 }
+      setCanvasDimensions()
     }
 
     // Handle mouse movement

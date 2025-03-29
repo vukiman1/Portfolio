@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Outfit, Fira_Code } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { LanguageProvider } from "@/hooks/use-language"
+import { ThemeProvider as ColorThemeProvider } from "@/hooks/use-theme"
 
 // Primary font for headings and UI
 const outfit = Outfit({
@@ -20,15 +22,14 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: "Vũ Kim An | Backend Developer",
-  description: "Portfolio of Vũ Kim An, a Backend Developer specializing in Node.js, NestJS, and more.",
-  generator: 'v0.dev',
+  description: "Portfolio of Vũ Kim An (vukiman1), a Backend Developer specializing in Node.js, NestJS, and more.",
+  generator: 'KimAn',
   icons: {
     icon: "/assets/mongo-db.png",
     shortcut:"/assets/mongo-db.png", 
     apple: "/assets/mongo-db.png",
   },
 }
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,7 +39,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${firaCode.variable}`}>
       <body className={outfit.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          {children}
+          <ColorThemeProvider>
+            <LanguageProvider>{children}</LanguageProvider>
+          </ColorThemeProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -5,8 +5,10 @@ import { ArrowDown, Github, Linkedin, Mail, Code, Terminal, Facebook } from "luc
 import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 import { GradientButton } from "@/components/ui/gradient-button"
+import { useLanguage } from "@/hooks/use-language"
 
 export default function Hero() {
+  const { t, language } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const heroRef = useRef<HTMLDivElement>(null)
 
@@ -18,6 +20,21 @@ export default function Hero() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const getTypeSequence = () => {
+    return language === "en"
+      ? ["Backend Developer", 2000, "NestJS Expert", 2000, "Node.js Developer", 2000, "Problem Solver", 2000]
+      : [
+          "Lập trình viên Backend",
+          2000,
+          "Chuyên gia NestJS",
+          2000,
+          "Lập trình viên Node.js",
+          2000,
+          "Giải quyết vấn đề",
+          2000,
+        ]
+  }
 
   return (
     <section ref={heroRef} className="hero-content">
@@ -35,7 +52,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="max-w-3xl mx-auto relative z-10"
+        className="max-w-3xl mx-auto px-4 relative z-10 w-full"
       >
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
@@ -45,7 +62,7 @@ export default function Hero() {
         >
           <span className="inline-flex items-center px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary rounded-full border border-primary/20">
             <Code className="w-4 h-4 mr-2" />
-            Backend Developer
+            {t("hero.role")}
             <Terminal className="w-4 h-4 ml-2" />
           </span>
         </motion.div>
@@ -56,16 +73,7 @@ export default function Hero() {
 
         <div className="h-12 mb-10">
           <TypeAnimation
-            sequence={[
-              "Backend Developer",
-              2000,
-              "NestJS Expert",
-              2000,
-              "Node.js Developer",
-              2000,
-              "Problem Solver",
-              2000,
-            ]}
+            sequence={getTypeSequence()}
             wrapper="h2"
             speed={50}
             className="hero-subtitle"
@@ -77,11 +85,9 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="hero-description"
+          className="hero-description px-4 sm:px-0"
         >
-          A highly motivated and friendly software developer, always eager to learn and grow in a professional working
-          environment. I thrive on challenges and constantly seek opportunities to develop my skills and expand my
-          knowledge.
+          {t("hero.description")}
         </motion.p>
 
         <motion.div
@@ -103,13 +109,13 @@ export default function Hero() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://www.linkedin.com/in/an-v%C5%A9-18181b307/"
+            href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-icon"
           >
             <Linkedin className="h-5 w-5" />
-          </motion.a> 
+          </motion.a>
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -121,11 +127,11 @@ export default function Hero() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            target="_blank"
             href="https://www.facebook.com/vukiman1/"
+             target="_blank"
             className="btn-icon"
           >
-            <Facebook  className="h-5 w-5" />
+            <Facebook className="h-5 w-5" />
           </motion.a>
         </motion.div>
 
@@ -136,7 +142,7 @@ export default function Hero() {
           className="mt-16 flex justify-center"
         >
           <GradientButton
-            text="Explore"
+            text={t("hero.explore")}
             icon={<ArrowDown className="h-5 w-5" />}
             variant="blue"
             onClick={() => {
@@ -153,7 +159,7 @@ export default function Hero() {
         className="hero-scroll-indicator"
       >
         <motion.div className="flex flex-col items-center gap-2" whileHover={{ scale: 1.1 }}>
-          <span className="text-xs text-primary/80 font-medium tracking-wider">SCROLL</span>
+          <span className="text-xs text-primary/80 font-medium tracking-wider">{t("hero.scroll")}</span>
           <div className="w-8 h-14 border-2 border-primary/40 rounded-full flex justify-center backdrop-blur-sm bg-primary/5 shadow-lg shadow-primary/20">
             <motion.div
               animate={{
