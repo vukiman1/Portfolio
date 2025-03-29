@@ -217,7 +217,7 @@ export default function MobileNavigation() {
           ))}
 
           {/* More button that expands to show additional items */}
-          <motion.button
+          {/* <motion.button
             className={`mobile-nav-item relative flex flex-col items-center justify-center p-2 rounded-lg transition-colors duration-300 ${
               isExpanded ? "text-primary active" : "text-gray-400 hover:text-gray-200"
             } ${clickedItem === "more" ? "nav-item-pulse" : ""}`}
@@ -246,7 +246,7 @@ export default function MobileNavigation() {
               <ChevronUp className={`h-5 w-5 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`} />
             </div>
             <span className="text-xs mt-1">{t("nav.more")}</span>
-          </motion.button>
+          </motion.button> */}
         </div>
 
         {/* Expanded navigation panel */}
