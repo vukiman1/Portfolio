@@ -58,7 +58,7 @@ export default function Hero() {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="mb-6"
+          className="mb-6 mt-6"
         >
           <span className="inline-flex items-center px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary rounded-full border border-primary/20">
             <Code className="w-4 h-4 mr-2" />
