@@ -13,6 +13,7 @@ import { Image } from 'antd';
 interface ProjectModalProps {
   project: {
     title: string;
+    titleLanguage: string;
     period: string;
     client: string;
     description: string;
@@ -37,7 +38,7 @@ function ProjectModal({ project, isOpen, onClose, t }: ProjectModalProps) {
           <div className="flex items-center justify-between">
             <DialogTitle className="text-2xl font-bold text-white flex items-center">
               <span className="text-primary mr-2">#</span>
-              {project.title}
+               {t(project.titleLanguage)}
             </DialogTitle>
             <button onClick={onClose} className="p-1 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
               <X className="h-5 w-5 text-primary" />
@@ -73,7 +74,7 @@ function ProjectModal({ project, isOpen, onClose, t }: ProjectModalProps) {
         {/* Project Description */}
         <div className="mt-4">
           <h3 className="text-lg font-medium text-primary mb-2">Description</h3>
-          <p className="text-gray-300">{project.description}</p>
+          <p className="text-gray-300">{t(project.description)}</p>
         </div>
 
         {/* Project Details */}
@@ -169,9 +170,10 @@ export default function Projects() {
   const projects = [
     {
       title: "Job Seeking Platform",
+      titleLanguage: "projects.pr1",
       period: "10/2024 - 01/2025",
       client: "Graduation project",
-      description: "A job-seeking and recruitment platform connecting employers with job seekers",
+      description: "projects.desc1",
       link: "Vieclam365.top",
       github: "https://github.com/vukiman1/myob_api_nodejs",
       members: 2,
@@ -204,10 +206,10 @@ export default function Projects() {
     },
     {
       title: "Trading Coin/Stock Platform",
+      titleLanguage: "projects.pr2",
       period: "08/2024 - 11/2024",
       client: "TinaSoft Viet Nam",
-      description:
-        "A financial trading platform providing real-time market data, supporting stock and cryptocurrency trading, and implementing betting mechanisms with automated payouts.",
+      description: "projects.desc2",
       members: 6,
       position: "Backend",
       images: ["/assets/project_picture/job2.png", "/assets/project_picture/job22.png"],
@@ -233,9 +235,10 @@ export default function Projects() {
     },
     {
       title: "CRM System",
+      titleLanguage: "projects.pr3",
       period: "05/2024 - 7/2024",
       client: "TinaSoft Viet Nam",
-      description: "A CRM system to manage customer interactions, sales pipelines, and business processes.",
+      description: "projects.desc3",
       members: 5,
       position: "Backend Intern",
       images: ["/assets/project_picture/job3.png", "/assets/project_picture/job33.png"],
@@ -247,9 +250,10 @@ export default function Projects() {
     },
     {
       title: "Tour Travel Booking",
+      titleLanguage: "projects.pr4",
       period: "10/2023-12/2023",
       client: "User",
-      description: "Tour booking website",
+      description: "projects.desc4",
       members: 2,
       position: "Backend",
       images: ["/assets/project_picture/job4.png", "/assets/project_picture/job44.png"],
@@ -317,7 +321,7 @@ export default function Projects() {
                   <div className="mb-3">
                     <h3 className="text-lg font-semibold text-white mb-1 flex items-center">
                       <span className="text-primary mr-2">#</span>
-                      {project.title}
+                      {t(project.titleLanguage)}
                     </h3>
                     <p className="text-gray-400 text-sm">{project.client}</p>
                   </div>
@@ -327,7 +331,7 @@ export default function Projects() {
                     <span className="text-gray-300">{project.period}</span>
                   </div>
 
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-2">{project.description}</p>
+                  <p className="text-gray-300 text-sm mb-4 line-clamp-2">{t(project.description)}</p>
 
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.technologies.slice(0, 3).map((tech, techIndex) => (

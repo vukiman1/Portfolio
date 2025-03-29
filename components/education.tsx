@@ -49,7 +49,7 @@ export default function Education() {
                       className="h-full w-full object-contain"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold text-white"><a href="https://thanglong.edu.vn/" target="_blank">Thang Long University</a></h3>
+                    <h3 className="text-xl font-semibold text-white"><a href="https://thanglong.edu.vn/" target="_blank">{t("education.university")}</a></h3>
                   </div>
                   <div className="flex items-center mt-2 md:mt-0">
                     <Calendar className="h-4 w-4 text-primary mr-2" />
@@ -59,7 +59,7 @@ export default function Education() {
                   </div>
                 </div>
 
-                <p className="text-primary mb-5 ml-12 md:ml-0">Information & Technology</p>
+                <p className="text-primary mb-5 ml-12 md:ml-0">{t("education.majorName")}</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-12 md:ml-0">
                   <motion.div

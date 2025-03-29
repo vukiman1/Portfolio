@@ -49,7 +49,7 @@ export default function Experience() {
                       className="h-full w-full object-contain"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold text-white">Intern Backend Developer</h3>
+                    <h3 className="text-xl font-semibold text-white">{t("experience.position")}</h3>
                   </div>
                   <div className="flex items-center mt-2 md:mt-0">
                     <Calendar className="h-4 w-4 text-primary mr-2" />
@@ -68,7 +68,7 @@ export default function Experience() {
                     viewport={{ once: true }}
                     className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300"
                   >
-                    <p className="text-gray-300">• Design and optimize PostgreSQL databases</p>
+                    <p className="text-gray-300">• {t("experience.desc1")}</p>
                   </motion.div>
 
                   <motion.div
@@ -78,7 +78,7 @@ export default function Experience() {
                     viewport={{ once: true }}
                     className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300"
                   >
-                    <p className="text-gray-300">• Develop and deploy RESTful APIs using NestJS</p>
+                    <p className="text-gray-300">• {t("experience.desc2")}</p>
                   </motion.div>
 
                   <motion.div
@@ -89,7 +89,7 @@ export default function Experience() {
                     className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300"
                   >
                     <p className="text-gray-300">
-                      • Research and implement security mechanisms such as JWT, Guards, and OAuth2 (Google, Facebook)
+                      • {t("experience.desc3")}
                     </p>
                   </motion.div>
 
@@ -100,7 +100,7 @@ export default function Experience() {
                     viewport={{ once: true }}
                     className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300"
                   >
-                    <p className="text-gray-300">• Integrate Google and Facebook login</p>
+                    <p className="text-gray-300">• {t("experience.desc4")}</p>
                   </motion.div>
 
                   <motion.div
@@ -111,7 +111,7 @@ export default function Experience() {
                     className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300"
                   >
                     <p className="text-gray-300">
-                      • Implement cloud-based data storage solutions (AWS S3, Firebase Storage)
+                      • {t("experience.desc5")}
                     </p>
                   </motion.div>
                 </div>

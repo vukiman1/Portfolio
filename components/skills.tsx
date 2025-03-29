@@ -106,23 +106,6 @@ export default function Skills() {
           ))}
         </div>
 
-        <motion.div
-          variants={itemVariants}
-          className="mt-10 md:mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 md:gap-4"
-        >
-          {["JavaScript", "TypeScript", "Node.js", "NestJS", "Express.js", "PostgreSQL", "MongoDB", "React.js"].map(
-            (tech, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="skill-circle mx-auto"
-              >
-                <span className="text-xs font-medium text-primary">{tech}</span>
-              </motion.div>
-            ),
-          )}
-        </motion.div>
       </motion.div>
     </section>
   )

@@ -109,7 +109,7 @@ export default function Hero() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/an-v%C5%A9-18181b307/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-icon"

@@ -150,6 +150,17 @@ export default function About() {
                     <p className="text-gray-300/80">{t("about.availabilityDesc")}</p>
                   </motion.div>
                 </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-1 gap-3 mt-3">
+                <motion.div
+                    whileHover={{ y: -5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300 border border-primary/10 hover:border-primary/30"
+                  >
+                    <h4 className="text-lg font-medium mb-2 text-primary">{t("about.target")}</h4>
+                    <p className="text-gray-300/80">{t("about.targetDesc")}</p>
+                  </motion.div>
+                </div>
               </CardContent>
             </Card>
           </motion.div>

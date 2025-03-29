@@ -54,6 +54,8 @@ const translations = {
     "about.learningDesc": "Demonstrated ability to rapidly learn and implement new technologies",
     "about.availability": "Availability",
     "about.availabilityDesc": "Available for full-time work in Hà Nội, Việt Nam",
+    "about.targetDesc": "A Short-term goal: Improve backend skills (Node.js, NestJS, PostgreSQL), deepen understanding of system architecture, and optimize APIs. Long-term goal: Become a highly skilled backend developer, master DevOps and microservices, and aim for a Backend Lead or Software Architect role.",
+    "about.target": "Career Goals",
 
     // Skills section
     "skills.title": "My Skills",
@@ -67,11 +69,20 @@ const translations = {
     "experience.title": "Work Experience",
     "experience.position": "Intern Backend Developer",
     "experience.company": "Tinasoft Vietnam",
+    "experience.desc1": "Design and optimize PostgreSQL databases",
+    "experience.desc2": "Develop and deploy RESTful APIs using NestJS",
+    "experience.desc3": "Research and implement security mechanisms such as JWT, Guards, and OAuth2 (Google, Facebook)",
+    "experience.desc4": "Integrate Google and Facebook login",
+    "experience.desc5": "Implement cloud-based data storage solutions (AWS S3, Firebase Storage)",
 
     // Projects section
     "projects.title": "Projects",
     "projects.client": "Client",
     "projects.period": "Period",
+    "projects.desc1":"A job-seeking and recruitment platform connecting employers with job seekers",
+    "projects.desc2":"A financial trading platform providing real-time market data, supporting stock and cryptocurrency trading, and implementing betting mechanisms with automated payouts.",
+    "projects.desc3":"A CRM system to manage customer interactions, sales pipelines, and business processes.",
+    "projects.desc4":"Tour booking website",
     "projects.team": "Team",
     "projects.members": "members",
     "projects.role": "Role",
@@ -79,6 +90,21 @@ const translations = {
     "projects.details": "Details",
     "projects.collapse": "Collapse",
     "projects.keyFunctions": "Key Functions",
+    "projects.pr1":"Job Seeking Platform",
+    "projects.pr2":"Trading Coin/Stock Platform",
+    "projects.pr3":"CRM System",
+    "projects.pr4":"Tour Travel Booking",
+    "projects.functions1": [
+      "User Authentication: Sign up & login using Google, Facebook, JWT-based authentication, session management with cookies, email sms code.",
+      "Cloud Storage: AWS for Storage PostgreSQL database, Cloudinary for storage image.",
+      "Resume Upload & Parsing: Users can upload resumes (PDF, DOCX), extract key details for profile enhancement.",
+      "Send email active account, Email Advertisement",
+      "Payment Integration: MoMo & VNPAY integration for premium job postings and featured listings.",
+      "Job Management: Employers can post jobs, edit listings, manage applications, and track hiring progress.",
+      "Advanced Job Search & Filtering: Full-text search with PostgreSQL, filters based on skills, location, salary, and job type.",
+      "Personalized Job Recommendation System: Suggest jobs based on users with similar profiles and application history.",
+    
+    ],
 
     // Education section
     "education.title": "Education",
@@ -147,7 +173,8 @@ const translations = {
     "about.learningDesc": "Sẵn sàng học hỏi và áp dụng công nghệ mới",
     "about.availability": "Tình trạng",
     "about.availabilityDesc": "Sẵn sàng làm việc toàn thời gian tại Hà Nội, Việt Nam",
-
+    "about.target": "Mục tiêu",
+    "about.targetDesc": "Mục tiêu ngắn hạn: Nâng cao kỹ năng backend (Node.js, NestJS, PostgreSQL), hiểu sâu về kiến trúc hệ thống và tối ưu API. Mục tiêu dài hạn: Trở thành backend developer chuyên sâu, nắm vững DevOps, microservices và hướng tới vị trí Backend Lead hoặc Software Architect.",
     // Skills section
     "skills.title": "Kỹ năng của tôi",
     "skills.languages": "Ngôn ngữ lập trình",
@@ -160,6 +187,11 @@ const translations = {
     "experience.title": "Kinh nghiệm làm việc",
     "experience.position": "Thực tập sinh Backend",
     "experience.company": "Tinasoft Vietnam",
+    "experience.desc1": "Thiết kế và tối ưu hóa cơ sở dữ liệu PostgreSQL",
+    "experience.desc2": "Phát triển và triển khai API RESTful bằng NestJS",
+    "experience.desc3": "Nghiên cứu và triển khai các cơ chế bảo mật như JWT, Guards, OAuth2 (Google, Facebook)",
+    "experience.desc4": "Tích hợp đăng nhập Google và Facebook",
+    "experience.desc5": "Triển khai các giải pháp lưu trữ dữ liệu dựa trên đám mây (AWS S3, Firebase Storage)",
 
     // Projects section
     "projects.title": "Dự án",
@@ -170,9 +202,22 @@ const translations = {
     "projects.role": "Vai trò",
     "projects.technologies": "Công nghệ",
     "projects.details": "Chi tiết",
+    "projects.desc1": "Nền tảng tìm kiếm việc làm và tuyển dụng kết nối nhà tuyển dụng với người tìm việc",
+    "projects.desc2": "Nền tảng giao dịch tài chính cung cấp dữ liệu thị trường theo thời gian thực, hỗ trợ giao dịch chứng khoán và tiền điện tử, đồng thời triển khai cơ chế cá cược với các khoản thanh toán tự động.",
+    "projects.desc3": "Hệ thống quản lý khách hàng giúp doanh nghiệp theo dõi và quản lý thông tin khách hàng, tương tác và giao dịch với họ.",
+    "projects.desc4": "Nền tảng đặt tour du lịch trực tuyến, cho phép người dùng tìm kiếm và đặt tour một cách dễ dàng.",
     "projects.collapse": "Thu gọn",
     "projects.keyFunctions": "Chức năng chính",
+    "projects.pr1":"Trang web tìm kiếm việc làm",
+    "projects.pr2":"Trang giao dịch chứng khoán, blockchain",
+    "projects.pr3":"Hệ thống CRM",
+    "projects.pr4":"Trang web đặt tour du lịch",
 
+    "project.function1": [
+      "a",
+      "b",
+      "cddd",
+    ],
     // Education section
     "education.title": "Học vấn",
     "education.university": "Đại học Thăng Long",
