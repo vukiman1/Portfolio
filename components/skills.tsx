@@ -13,7 +13,7 @@ export default function Skills() {
       title: t("skills.languages"),
       icon: <Code className="h-6 w-6 text-primary" />,
       skills: ["JavaScript", "TypeScript", "HTML", "CSS"],
-      images: ["/assets/javaScript.png", "/assets/typeScript.png", "/assets/html.png", "/assets/css.png"],
+      images: ["/assets/jsc.png", "/assets/tpc.png", "/assets/html.png", "/assets/css.png"],
     },
     {
       title: t("skills.frameworks"),
