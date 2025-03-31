@@ -21,13 +21,36 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: "Vũ Kim An | Backend Developer",
   description: "Portfolio of Vũ Kim An, a Backend Developer specializing in Node.js, NestJS, and more.",
-  generator: 'v0.dev',
+  generator: "Next.Js",
   icons: {
     icon: "/assets/mongo-db.png",
-    shortcut:"/assets/mongo-db.png", 
+    shortcut: "/assets/mongo-db.png",
     apple: "/assets/mongo-db.png",
   },
-}
+  metadataBase: new URL("https://www.kiman.id.vn"), // URL chính thức của bạn
+  openGraph: {
+    type: "website",
+    url: "https://www.kiman.id.vn",
+    title: "Vũ Kim An | Backend Developer",
+    description: "Portfolio of Vũ Kim An, a Backend Developer specializing in Node.js, NestJS, and more.",
+    images: [
+      {
+        url: "/assets/avatar.jpg", // Ảnh đại diện khi chia sẻ
+        width: 1000,
+        height: 1000,
+        alt: "Vũ Kim An - Backend Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@your_twitter", // Thay bằng Twitter handle của bạn
+    title: "Vũ Kim An | Backend Developer",
+    description: "Portfolio of Vũ Kim An, a Backend Developer specializing in Node.js, NestJS, and more.",
+    images: ["https://www.kiman.id.vn/assets/og-image.jpg"],
+  },
+  robots: "index, follow", // Yêu cầu Google index trang web
+};
 
 export default function RootLayout({
   children,
