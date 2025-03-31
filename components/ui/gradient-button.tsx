@@ -75,16 +75,16 @@ export function GradientButton({
             "absolute -inset-[3px] rounded-full animate-none group-hover:animate-spin-slow",
             "bg-[length:400%_400%] bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300",
             variant === "blue"
-              ? "from-blue-300 via-blue-500 to-cyan-400"
+              ? "from-blue-400 via-blue-600 to-cyan-500"
               : variant === "purple"
-                ? "from-purple-300 via-purple-500 to-pink-400"
+                ? "from-indigo-400 via-purple-600 to-indigo-500"
                 : variant === "red"
-                  ? "from-red-300 via-red-600 to-red-500"
+                  ? "from-red-400 via-red-600 to-rose-500"
                   : variant === "pink"
-                    ? "from-pink-300 via-pink-500 to-purple-400"
+                    ? "from-pink-400 via-fuchsia-600 to-purple-500"
                     : variant === "orange"
-                      ? "from-orange-300 via-orange-500 to-pink-500"
-                      : "from-pink-300 via-red-500 to-orange-500",
+                      ? "from-amber-400 via-orange-600 to-amber-500"
+                      : "from-blue-400 via-indigo-600 to-blue-500",
           )}
         ></div>
       </div>

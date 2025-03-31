@@ -4,8 +4,11 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Briefcase, Calendar } from "lucide-react"
+import { useLanguage } from "@/hooks/use-language"
 
 export default function Experience() {
+  const { t } = useLanguage()
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -22,7 +25,7 @@ export default function Experience() {
   }
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-16 md:py-20">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -30,14 +33,14 @@ export default function Experience() {
         variants={containerVariants}
       >
         <motion.h2 variants={itemVariants} className="section-title">
-          Work Experience
+          {t("experience.title")}
         </motion.h2>
 
         <motion.div variants={itemVariants} className="max-w-3xl mx-auto">
           <Card className="glass-card overflow-hidden">
-            <CardContent className="pt-6">
+            <CardContent className="pt-6 px-4 md:px-6">
               <div className="timeline-item">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div className="flex items-center">
                     <div className="h-8 w-8 mr-3">
                       <img
@@ -46,7 +49,7 @@ export default function Experience() {
                       className="h-full w-full object-contain"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold text-white">Intern Backend Developer</h3>
+                    <h3 className="text-xl font-semibold text-white">{t("experience.position")}</h3>
                   </div>
                   <div className="flex items-center mt-2 md:mt-0">
                     <Calendar className="h-4 w-4 text-primary mr-2" />
@@ -55,10 +58,9 @@ export default function Experience() {
                     </Badge>
                   </div>
                 </div>
+                <p className="text-primary mb-6 ml-12 md:ml-0"><a href="https://tinasoft.io/vi/" target="_blank">{t("experience.company")}</a></p>
 
-                <p className="text-primary mb-6 ml-12 md:ml-0"><a href="https://tinasoft.io/vi/" target="_blank">Tinasoft Vietnam</a></p>
-
-                <div className="space-y-4 ml-12 md:ml-0">
+                <div className="space-y-3 ml-12 md:ml-0">
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -66,7 +68,7 @@ export default function Experience() {
                     viewport={{ once: true }}
                     className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300"
                   >
-                    <p className="text-gray-300">• Design and optimize PostgreSQL databases</p>
+                    <p className="text-gray-300">• {t("experience.desc1")}</p>
                   </motion.div>
 
                   <motion.div
@@ -76,7 +78,7 @@ export default function Experience() {
                     viewport={{ once: true }}
                     className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300"
                   >
-                    <p className="text-gray-300">• Develop and deploy RESTful APIs using NestJS</p>
+                    <p className="text-gray-300">• {t("experience.desc2")}</p>
                   </motion.div>
 
                   <motion.div
@@ -87,7 +89,7 @@ export default function Experience() {
                     className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300"
                   >
                     <p className="text-gray-300">
-                      • Research and implement security mechanisms such as JWT, Guards, and OAuth2 (Google, Facebook)
+                      • {t("experience.desc3")}
                     </p>
                   </motion.div>
 
@@ -98,7 +100,7 @@ export default function Experience() {
                     viewport={{ once: true }}
                     className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300"
                   >
-                    <p className="text-gray-300">• Integrate Google and Facebook login</p>
+                    <p className="text-gray-300">• {t("experience.desc4")}</p>
                   </motion.div>
 
                   <motion.div
@@ -109,7 +111,7 @@ export default function Experience() {
                     className="p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-all duration-300"
                   >
                     <p className="text-gray-300">
-                      • Implement cloud-based data storage solutions (AWS S3, Firebase Storage)
+                      • {t("experience.desc5")}
                     </p>
                   </motion.div>
                 </div>
